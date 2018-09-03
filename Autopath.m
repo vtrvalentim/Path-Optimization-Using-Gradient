@@ -48,24 +48,9 @@ title('mesh');
 %cur_loc = initial_loc;
 %final_loc = [100,100];
 
-% Above, we plot the mesh and contour plot as a single figure.
-%
-% a) Plot the contour plot and mesh of the vector field as separate figures.
-% Useful functions are contour, mesh, surf, meshc, etc.
-% Use x, y, and z(x, y) to plot the vector field.
-%
-% a) Plot the gradient (dx, dy) as quivers over the contour plot
-% Use x, y, dx(x,y), and dy(x,y) to plot the quivers
-%
-% c) Indicate where the bot will begin, blue asterisk, and where the
-% bot will finish, red asterisk. (Look through the code).
 
 
 %% Part 2
-% Implement the algorithm from the discussion slides to control the bot
-% through the vector field helping it reach it's final location.
-% Plot each location it passes through as a blue asterisk, the final image
-% should be the complete trajectory the bot takes.
 
 %Press any key to begin the animation
 pause;
@@ -73,8 +58,6 @@ pause;
 
 for i=1:200
     
-    % This line must be deleted and replaced with your gradient descent update,
-    % it's here to show you how the bot might move.
     
     noise = randn(1,2)/1e20;
     A = abs(1/sqrt((dx(cur_loc(1,1), cur_loc(1,2))).^2 + (dy(cur_loc(1,1), cur_loc(1,2))).^2));
